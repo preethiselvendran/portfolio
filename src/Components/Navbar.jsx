@@ -17,10 +17,17 @@ const Navbar = ({ darkmode, handleToggle }) => {
   const toggleMenu = () => setMenu(!menu);
 
   return (
-    <div id='home' className='transition-colors duration-500 scroll-mt-15 '>
+   <div
+      id='home'
+      className='transition-colors duration-500 relative z-50'
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
+    >
+      {/* Navbar Top Section */}
       <div className='container mx-auto flex items-center justify-between p-5'>
         <h1 className='sm:text-xl md:text-2xl font-michroma'>Preethi.</h1>
-   
+
         {/* Desktop Menu */}
         <ul className='hidden md:flex lg:gap-8 md:gap-5'>
           {items.map((item, index) => (
@@ -30,6 +37,7 @@ const Navbar = ({ darkmode, handleToggle }) => {
           ))}
         </ul>
 
+        {/* Right Side: Theme Toggle + Contact + Mobile Icon */}
         <div className="flex gap-4 items-center">
           <button onClick={handleToggle}>
             {darkmode ? (
@@ -50,22 +58,23 @@ const Navbar = ({ darkmode, handleToggle }) => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Dropdown */}
       {menu && (
-        <div className='md:hidden flex flex-col items-center gap-8 py-8'>
+        <div className={`md:hidden flex flex-col items-center gap-4 py-4 
+                        ${darkmode ? "bg-black text-white" : "bg-white text-black"}`}>
           {items.map((item, index) => (
-            <a key={index} href={item.link} className='text-lg hover:text-purple-800'>
+            <a key={index} href={item.link} onClick={closeMenu} className='text-lg hover:text-purple-800'>
               {item.name}
             </a>
           ))}
-          <a href="#contact" className='px-5 py-2 rounded-md bg-purple-700 text-white'>
+          <a href="#contact" className='px-5 py-2 rounded-md bg-purple-700 text-white' onClick={closeMenu}>
             Contact Me
           </a>
         </div>
       )}
 
       {/* Hero Section */}
-      <div className='mt-40 text-center space-y-5'>
+      <div className='mt-20 md:mt-32 text-center space-y-5'>
         <p className='font-bold'>Welcome to my portfolio website!</p>
         <h1 className='sm:text-lg md:text-2xl font-michroma'>Hey, I'm Preethi Selvendran</h1>
         <h1 className='sm:text-lg md:text-2xl font-michroma'>Frontend Developer</h1>
@@ -83,17 +92,18 @@ const Navbar = ({ darkmode, handleToggle }) => {
             Contact Me
           </button>
         </a>
-<a 
-  href="/resume.pdf" 
-  download 
-  className="px-5 py-2 rounded-md flex items-center gap-2 bg-gradient-to-r from-purple-600 to-orange-400 text-white"
->
-  Resume Download
-  <IoArrowDownCircleSharp />
-</a>
+        <a 
+          href="/resume.pdf" 
+          download 
+          className="px-5 py-2 rounded-md flex items-center gap-2 bg-gradient-to-r from-purple-600 to-orange-400 text-white"
+        >
+          Resume Download
+          <IoArrowDownCircleSharp />
+        </a>
       </div>
     </div>
   );
+
 };
 
 export default Navbar;

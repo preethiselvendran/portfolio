@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Navbar from './Components/Navbar'
 import About from './Components/About'
 import Skills from './Components/Skills'
@@ -14,6 +16,14 @@ const App = () => {
   const handleToggle = () => {
     setDarkmode(!darkmode);
   };
+
+   useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  }, []);
+
 
   return (
     <div className={`${darkmode ? "bg-black text-white" : "bg-white text-black"}`}>

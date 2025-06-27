@@ -2,7 +2,7 @@ import React from 'react';
 
 const Projects = ({ darkmode }) => {
   return (
-    <div id='project' className={`container mx-auto px-5 py-10 scroll-mt-16 ${darkmode ? "bg-black text-white" : "bg-white text-black"} transition-colors duration-500`}>
+    <div id='project' className={`container mx-auto px-5 py-10 scroll-mt-0 ${darkmode ? "bg-black text-white" : "bg-white text-black"} transition-colors duration-500`}>
       <div className='text-center space-y-5'>
         <h1 className='text-2xl font-bold text-purple-700 mt-40'>Projects</h1>
         <p className='text-lg font-medium'>(My Recent Work)</p>
@@ -11,12 +11,15 @@ const Projects = ({ darkmode }) => {
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10'>
         
         {/* Project 1 */}
-        <div className='border-2 border-transparent rounded-lg p-5 shadow-lg hover:shadow-purple-500/50 hover:scale-105 transition-transform duration-300 hover:border-purple-700 group'>
+        <div className='border-2 border-transparent rounded-lg p-5 shadow-lg hover:shadow-purple-500/50 hover:scale-105 transition-transform duration-300 
+        hover:border-purple-700 group mb-10' data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
           <h2 className='text-xl font-bold mb-3 text-purple-700 group-hover:text-purple-500 transition-colors'>Portfolio Website</h2>
           <p className='mb-6 text-gray-600 dark:text-gray-500'>
             A personal portfolio website to showcase my projects, skills, and services using React.js with smooth animations and clean design.
           </p>
-          <div className='flex justify-between'>
+          <div className='flex justify-end gap-3 md:gap-5'>
             <a 
               href='https://www.linkedin.com/in/preethiselvendran' 
               target='_blank' 
@@ -35,12 +38,15 @@ const Projects = ({ darkmode }) => {
         </div>
 
         {/* Project 2 */}
-        <div className='border-2 border-transparent rounded-lg p-5 shadow-lg hover:shadow-purple-500/50 hover:scale-105 transition-transform duration-300 hover:border-purple-700 group'>
+        <div className='border-2 border-transparent rounded-lg p-5 shadow-lg hover:shadow-purple-500/50 hover:scale-105 
+        transition-transform duration-300 hover:border-purple-700 group mb-10' data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
           <h2 className='text-xl font-bold mb-3 text-purple-700 group-hover:text-purple-500 transition-colors'>Travel Dashboard</h2>
           <p className='mb-6 text-gray-600 dark:text-gray-500'>
             A responsive travel dashboard with attractive design and real-time search features built using React.js and Tailwind CSS.
           </p>
-          <div className='flex justify-between'>
+          <div className='flex justify-end gap-3 md:gap-5'>
             <a 
               href='https://www.linkedin.com/in/preethiselvendran' 
               target='_blank' 

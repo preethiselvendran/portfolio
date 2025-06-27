@@ -22,8 +22,8 @@ const Contact = ({ darkmode }) => {
   }
 
   return (
-    <div id='contact' className={`container mx-auto px-5 py-10 scroll-mt-15 ${darkmode ? "bg-black text-white" : "bg-white text-black"} 
-    transition-colors duration-500 `}>
+    <div id='contact' className={`container mx-auto px-5 py-10 scroll-mt-0 ${darkmode ? "bg-black text-white" : "bg-white text-black"} 
+    transition-colors duration-500 `} data-aos="zoom-in-up">
       <div className='text-center space-y-4'>
         <h1 className='text-2xl font-bold text-purple-700 mt-40'>Contact Me</h1>
         <h3 className='text-lg font-medium'>(Get In Touch)</h3>
@@ -34,7 +34,7 @@ const Contact = ({ darkmode }) => {
         {/* Name and Email side by side */}
         <div className='flex flex-col md:flex-row gap-5 w-full justify-center'>
           <input
-            type='text'
+          aria-label='text'
             placeholder='Enter Your Name'
             className='border border-stone-500 px-10 py-2 rounded-md focus:outline-none focus:border-purple-700 text-center w-full md:w-1/3'
             value={name}
@@ -42,7 +42,7 @@ const Contact = ({ darkmode }) => {
             required
           />
           <input
-            type='email'
+           aria-label='email'
             placeholder='Enter Your Email'
             className='border border-stone-500 px-10 py-2 rounded-md focus:outline-none focus:border-purple-700 text-center w-full md:w-1/3'
             value={email}
@@ -52,9 +52,9 @@ const Contact = ({ darkmode }) => {
         </div>
 
         {/* Message below */}
-        <textarea
+        <textarea aria-label = 'Message'
      placeholder='Enter Your Message'
-     className='border border-stone-500 px-20 py-3 rounded-md focus:outline-none focus:border-purple-700 text-center '
+     className='border border-stone-500 px-5 md:px-20 py-3 rounded-md focus:outline-none focus:border-purple-700 text-center '
      value={message}
      onChange={(e) => setMessage(e.target.value)}
      required
