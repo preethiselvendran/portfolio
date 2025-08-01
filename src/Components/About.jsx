@@ -8,7 +8,7 @@ const About = ({ darkmode }) => {
   return (
    <div id='about' className={`  container mx-auto px-5 py-10 scroll-mt-0  ${darkmode ? "bg-black text-white" : "bg-white text-black"} transition-colors duration-500 `}>
   <div className='space-y-3 text-center'>
-    <p className='text-xl font-medium mt-44'>(Introduction)</p>
+    <p className='text-xl font-medium mt-52'>(Introduction)</p>
     <h1 className='font-bold text-2xl text-violet-800'>About Me</h1>
   </div>
 
@@ -21,14 +21,9 @@ const About = ({ darkmode }) => {
 
          </p>
           </div>
-
- 
-
-     <div className='flex-1'> 
-         <img src={Vector}  alt='About' className='w-60 max-w-sm mx-auto' data-aos="fade-left"/>
-      
-     </div>
-  </div>
+     
+               <img src={Vector} className='size-72'  />
+           </div>
 </div>
 
   )

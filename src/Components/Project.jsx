@@ -28,7 +28,7 @@ const Projects = ({ darkmode }) => {
               LinkedIn
             </a>
             <a 
-              href='https://github.com/preethiselvendran' 
+              href='https://github.com/preethiselvendran/portfolio.git' 
               target='_blank' 
               rel='noreferrer' 
               className='px-4 py-2 rounded-md border border-purple-700 text-purple-700 font-medium hover:bg-purple-700 hover:text-white transition-colors'>
@@ -42,7 +42,7 @@ const Projects = ({ darkmode }) => {
         transition-transform duration-300 hover:border-purple-700 group mb-10' data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000">
-          <h2 className='text-xl font-bold mb-3 text-purple-700 group-hover:text-purple-500 transition-colors'>Travel Dashboard</h2>
+          <h2 className='text-xl font-bold mb-3 text-purple-700 group-hover:text-purple-500 transition-colors'>Travel Website</h2>
           <p className='mb-6 text-gray-600 dark:text-gray-500'>
             A responsive travel dashboard with attractive design and real-time search features built using React.js and Tailwind CSS.
           </p>
@@ -55,7 +55,7 @@ const Projects = ({ darkmode }) => {
               LinkedIn
             </a>
             <a 
-              href='https://github.com/preethiselvendran' 
+              href='https://github.com/preethiselvendran/Travel-Website.git' 
               target='_blank' 
               rel='noreferrer' 
               className='px-4 py-2 rounded-md border border-purple-700 text-purple-700 font-medium hover:bg-purple-700 hover:text-white transition-colors'>

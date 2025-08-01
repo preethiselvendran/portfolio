@@ -102,8 +102,6 @@ const Skills = ({ darkmode }) => {
     </div>
   </div>
 )
-
-  
 }
 
 export default Skills;
